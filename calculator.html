@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>Calculator</title>
+
+<style>
+.container {
+	border : 2px solid black;
+	height: 450px;
+	width: 400px;
+	background-color: lightgrey;
+}
+
+input{
+	margin-left:45px;
+	height:40px;
+	width:300px;
+	font-size:20px;
+	border: 2px solid black;
+
+}
+
+table{
+	height:300px;
+	width:300px;
+	border : 1px solid black;
+	
+}
+button{
+	height:70px;
+	width:70px;
+	text-align:center;
+	background-color:lightblue;
+	box-shadow:2px 2px 2px grey;
+	font-size:20px;
+}
+
+h2{
+	text-align:center;
+}
+
+</style>
+
+</head>
+<body>
+<br>
+<h2>Calculator</h2>
+<br><br>
+<table class="container" align="center">
+<tr><td>
+<form>
+<input type=text id="display" disabled>
+</form>
+
+<table align="center">
+	
+	
+	<tr>
+		<td><button onclick="document.getElementById('display').value += 1">1</button></td>
+		<td><button onclick="document.getElementById('display').value += 2">2</button></td>
+		<td><button onclick="document.getElementById('display').value += 3">3</button></td>
+		<td><button onclick="document.getElementById('display').value += '+'">+</button></td>
+	</tr>
+	
+	<tr>
+		<td><button onclick="document.getElementById('display').value += 4">4</button></td>
+		<td><button onclick="document.getElementById('display').value += 5">5</button></td>
+		<td><button onclick="document.getElementById('display').value += 6">6</button></td>
+		<td><button onclick="document.getElementById('display').value += '-'">-</button></td>
+	</tr>
+	
+	<tr>
+		<td><button onclick="document.getElementById('display').value += 7">7</button></td>
+		<td><button onclick="document.getElementById('display').value += 8">8</button></td>
+		<td><button onclick="document.getElementById('display').value += 9">9</button></td>
+		<td><button onclick="document.getElementById('display').value += '*'">*</button></td>
+	</tr>
+	
+	<tr>
+		<td><button onclick="document.getElementById('display').value += 0">0</button></td>
+		<td><button onclick="document.getElementById('display').value = eval(document.getElementById('display').value); if(document.getElementById('display').value == 'Infinity'){document.getElementById('display').value = 'DIVIDE BY ZERO ERROR'}">=</button></td>
+		<td><button onclick="document.getElementById('display').value = ''">C</button></td>
+		<td><button onclick="document.getElementById('display').value += '/'">/</button></td>
+	</tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>
